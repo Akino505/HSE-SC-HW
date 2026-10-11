@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace SC_HW_1_HSEkat.Items
+﻿namespace SC_HW_1_HSEkat.Items
 {
     public class Helmet : Equipment
     {

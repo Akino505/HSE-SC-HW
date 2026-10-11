@@ -1,9 +1,4 @@
-﻿using SC_HW_1_HSEkat.Parameters;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace SC_HW_1_HSEkat.Items
+﻿namespace SC_HW_1_HSEkat.Items
 {
     public class DockStation : ElectricEquipment
     {
