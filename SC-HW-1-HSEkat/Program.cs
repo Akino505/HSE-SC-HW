@@ -4,7 +4,7 @@ using System.Text;
 
 Console.OutputEncoding = Encoding.UTF8;
 
-var services = new ServiceCollection().AddVyshKat();
+var services = new ServiceCollection().AddHSEKat();
 using var provider = services.BuildServiceProvider();
 
 provider.GetRequiredService<ConsoleApp>().Run();

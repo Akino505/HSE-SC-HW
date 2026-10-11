@@ -5,7 +5,7 @@ namespace SC_HW_1_HSEkat
 {
     public static class ServiceCollectionExt
     {
-        public static IServiceCollection AddVyshKat(this IServiceCollection services)
+        public static IServiceCollection AddHSEKat(this IServiceCollection services)
         {
             services.AddSingleton<IServiceCenter, ServiceCenter>();
             services.AddSingleton<NumberGenerator>();
