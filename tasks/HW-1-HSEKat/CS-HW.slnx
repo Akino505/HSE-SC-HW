@@ -1,1 +1,4 @@
-<Solution />
+<Solution>
+  <Project Path="HSEkat.Test/HSEKat.Test.csproj" />
+  <Project Path="SC-HW-1-HSEkat/SC-HW-1-HSEkat.csproj" Id="8c20995f-13fd-47a7-a593-3b7cd1462392" />
+</Solution>
