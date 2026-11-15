@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SC-HW-1-HSEkat")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c366e5d313d52545b103719ba372be25912aa327")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+acae0a200e4ff8d7642eac24dbed6447eecd52e2")]
 [assembly: System.Reflection.AssemblyProductAttribute("SC-HW-1-HSEkat")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SC-HW-1-HSEkat")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

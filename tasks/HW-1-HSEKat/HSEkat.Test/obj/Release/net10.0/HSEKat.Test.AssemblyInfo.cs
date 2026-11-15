@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HSEKat.Test")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c366e5d313d52545b103719ba372be25912aa327")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+acae0a200e4ff8d7642eac24dbed6447eecd52e2")]
 [assembly: System.Reflection.AssemblyProductAttribute("HSEKat.Test")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HSEKat.Test")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
