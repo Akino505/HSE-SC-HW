@@ -1,0 +1,58 @@
+{
+  "Students": {
+    "2f819d86-aded-42e5-a9f8-332c10fea542": {
+      "Id": "2f819d86-aded-42e5-a9f8-332c10fea542",
+      "FullName": "DK"
+    }
+  },
+  "Criteria": [
+    {
+      "Id": "3b829880-57c9-48f3-8e55-3b5bc189e68b",
+      "Name": "Test 1",
+      "MaxScore": 10,
+      "Weight": 0.5
+    },
+    {
+      "Id": "51800c80-8ff6-46a4-abbd-69dc929b4d0b",
+      "Name": "Test 3",
+      "MaxScore": 10,
+      "Weight": 0.3
+    }
+  ],
+  "Grades": {
+    "5de75524-cab9-4038-84fa-62d4c41cbe71": {
+      "StudentId": "5de75524-cab9-4038-84fa-62d4c41cbe71",
+      "Evaluations": [
+        {
+          "CriterionId": "3b829880-57c9-48f3-8e55-3b5bc189e68b",
+          "Score": 10,
+          "Date": "2026-11-16T01:35:29.9598177+00:00",
+          "Comment": null
+        },
+        {
+          "CriterionId": "51800c80-8ff6-46a4-abbd-69dc929b4d0b",
+          "Score": 10,
+          "Date": "2026-11-16T01:35:43.2421625+00:00",
+          "Comment": null
+        }
+      ]
+    },
+    "2f819d86-aded-42e5-a9f8-332c10fea542": {
+      "StudentId": "2f819d86-aded-42e5-a9f8-332c10fea542",
+      "Evaluations": [
+        {
+          "CriterionId": "3b829880-57c9-48f3-8e55-3b5bc189e68b",
+          "Score": 5,
+          "Date": "2026-11-16T01:36:00.4470415+00:00",
+          "Comment": "2"
+        },
+        {
+          "CriterionId": "51800c80-8ff6-46a4-abbd-69dc929b4d0b",
+          "Score": 5,
+          "Date": "2026-11-16T01:36:18.8074079+00:00",
+          "Comment": null
+        }
+      ]
+    }
+  }
+}

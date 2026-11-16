@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "xCGae5FNKWs=",
+  "dgSpecHash": "WrCgu29PZv8=",
   "success": true,
   "projectFilePath": "C:\\Users\\9mabl\\source\\repos\\Akino505\\HSE-SC-HW\\tasks\\HW-2-POS\\HW-2-POS.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\9mabl\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\11.0.0\\microsoft.extensions.dependencyinjection.11.0.0.nupkg.sha512",
+    "C:\\Users\\9mabl\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\11.0.0\\microsoft.extensions.dependencyinjection.abstractions.11.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
