@@ -23,5 +23,11 @@ namespace HW_2_POS.Infrastructure.Repositories
             database.Grades[grades.StudentId] = grades.ToDTO();
             storage.Save(database);
         }
+        public void Delete(Guid id)
+        {
+            var database = storage.Load();
+            if (database.Students.Remove(id))
+                storage.Save(database);
+        }
     }
 }

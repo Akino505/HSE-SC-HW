@@ -7,5 +7,6 @@ namespace HW_2_POS.Domain.Repositories
         IReadOnlyList<StudentGrades> List();
         StudentGrades? GetByStudent(Guid studentId);
         void Save(StudentGrades grades);
+        void Delete(Guid studentId);
     }
 }

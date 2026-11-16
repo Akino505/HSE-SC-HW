@@ -15,6 +15,8 @@ namespace HW_2_POS.Presentation
             "  add student                 add a student\n" +
             "  criteria                    show the rubric (criteria)\n" +
             "  add criterion               add a criterion to the rubric\n" +
+            "  delete student              delete a student and their grades\n" +
+            "  delete criterion            delete a criterion and all grades for it\n" +
             "  grade                       put or correct a grade\n" +
             "  grades                      show grades of a student\n" +
             "  cancel                      cancel a grade\n" +
@@ -51,6 +53,9 @@ namespace HW_2_POS.Presentation
                         case "add student": AddStudent(); break;
                         case "criteria": ListCriteria(); break;
                         case "add criterion": AddCriterion(); break;
+                        case "delete student": DeleteStudent(); break;
+                        case "delete criterion":
+                        case "delete criteria": DeleteCriterion(); break;
                         case "grade": PutGrade(); break;
                         case "grades": ShowGrades(); break;
                         case "cancel": CancelGrade(); break;
@@ -187,6 +192,32 @@ namespace HW_2_POS.Presentation
             Console.WriteLine($"Results exported to {parts[2]}");
         }
 
+        // ---------------------------------------------------------------- deletion
+        private void DeleteStudent()
+        {
+            var studentId = PickStudent();
+
+            if (!Confirm("Delete this student and ALL their grades?"))
+            {
+                Console.WriteLine("Cancelled.");
+                return;
+            }
+            studentService.Delete(studentId);
+            Console.WriteLine("Student deleted.");
+        }
+
+        private void DeleteCriterion()
+        {
+            var criterionId = PickCriterion();
+            if (!Confirm("Delete this criterion? All grades given for it will be deleted too."))
+            {
+                Console.WriteLine("Cancelled.");
+                return;
+            }
+            var removedGrades = rubricService.DeleteCriterion(criterionId);
+            Console.WriteLine($"Criterion deleted. Grades removed: {removedGrades}.");
+        }
+
         // ---------------------------------------------------------------- demo
         private void RunDemo()
         {
@@ -254,6 +285,12 @@ namespace HW_2_POS.Presentation
                 Console.WriteLine($"  {i + 1}. {criteria[i].Name} (max {Fmt(criteria[i].MaxScore.Value)}, weight {Fmt(criteria[i].Weight.Value)})");
             var number = AskNumber("Criterion number: ", criteria.Count);
             return criteria[number - 1].Id;
+        }
+        private static bool Confirm(string question)
+        {
+            var answer = Ask($"{question} (y/n): ");
+            return answer.Equals("y", StringComparison.OrdinalIgnoreCase)
+                || answer.Equals("yes", StringComparison.OrdinalIgnoreCase);
         }
         private static string Ask(string prompt)
         {

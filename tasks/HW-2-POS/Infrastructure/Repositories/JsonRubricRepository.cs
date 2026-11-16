@@ -5,24 +5,17 @@ using HW_2_POS.Infrastructure.Storage;
 
 namespace HW_2_POS.Infrastructure.Repositories
 {
-    internal sealed class JsonStudentRepository(IDataStorage storage) : IStudentRepository
+    internal sealed class JsonRubricRepository(IDataStorage storage) : IRubricRepository
     {
-        public IReadOnlyList<Student> List()
+        public Rubric Get()
         {
-            return storage.Load().Students.Values.Select(dto => dto.ToDomain()).ToList();
+            return storage.Load().Criteria.ToDomain();
         }
-        public Student? GetById(Guid id)
-        {
-            return storage.Load().Students.TryGetValue(id, out var dto)
-                ? dto.ToDomain()
-                : null;
-        }
-        public void Save(Student student)
+        public void Save(Rubric rubric)
         {
             var database = storage.Load();
-            database.Students[student.Id] = student.ToDTO();
+            database.Criteria = rubric.ToDTOs();
             storage.Save(database);
         }
     }
-
 }

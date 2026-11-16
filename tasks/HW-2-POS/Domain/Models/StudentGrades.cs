@@ -25,6 +25,10 @@
             if (!_evaluations.Remove(criterionId))
                 throw new InvalidOperationException("There is no grade for this criterion");
         }
+        public bool CancelIfPresent(Guid criterionId)
+        {
+            return _evaluations.Remove(criterionId);
+        }
         public static StudentGrades Restore(Guid studentId, IEnumerable<Evaluation> evaluations)
         {
             var grades = new StudentGrades(studentId);

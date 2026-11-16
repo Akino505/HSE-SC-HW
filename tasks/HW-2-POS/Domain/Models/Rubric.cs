@@ -12,6 +12,11 @@
             Add(criterion);
             return criterion;
         }
+        public void RemoveCriterion(Guid id)
+        {
+            var criterion = GetCriterion(id) ?? throw new InvalidOperationException("Criterion is not in the rubric");
+            _criteria.Remove(criterion);
+        }
         public static Rubric Restore(IEnumerable<Criterion> criteria)
         {
             var rubric = new Rubric();
