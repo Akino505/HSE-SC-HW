@@ -54,8 +54,7 @@ namespace HW_2_POS.Presentation
                         case "criteria": ListCriteria(); break;
                         case "add criterion": AddCriterion(); break;
                         case "delete student": DeleteStudent(); break;
-                        case "delete criterion":
-                        case "delete criteria": DeleteCriterion(); break;
+                        case "delete criterion": DeleteCriterion(); break;
                         case "grade": PutGrade(); break;
                         case "grades": ShowGrades(); break;
                         case "cancel": CancelGrade(); break;
