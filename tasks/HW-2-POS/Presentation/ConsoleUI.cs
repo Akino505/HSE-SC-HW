@@ -116,7 +116,8 @@ namespace HW_2_POS.Presentation
             var maxScore = AskDecimal("Max score: ");
             var weight = AskDecimal("Weight: ");
             var criterion = rubricService.AddCriterion(name, maxScore, weight);
-            Console.WriteLine($"Criterion added: {criterion.Name}");
+            Console.WriteLine(
+    $"Criterion added: {criterion.Name} (max {Fmt(criterion.MaxScore.Value)}, weight {Fmt(criterion.Weight.Value)})");
         }
 
         // ---------------------------------------------------------------- grades
