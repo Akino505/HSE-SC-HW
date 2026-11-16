@@ -43,8 +43,8 @@ namespace HW_2_POS.Presentation
                     continue;
                 var parts = input.Split(' ', StringSplitOptions.RemoveEmptyEntries);
                 var command = parts[0].ToLowerInvariant();
-                if (command == "add" && parts.Length >= 2)
-                    command = "add " + parts[1].ToLowerInvariant();
+                if ((command == "add" || command == "delete") && parts.Length >= 2)
+                    command = command + " " + parts[1].ToLowerInvariant();
                 try
                 {
                     switch (command)
