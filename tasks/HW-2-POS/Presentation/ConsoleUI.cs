@@ -251,7 +251,7 @@ namespace HW_2_POS.Presentation
             if (criteria.Count == 0)
                 throw new InvalidOperationException("The rubric is empty. Use 'add criterion' first.");
             for (var i = 0; i < criteria.Count; i++)
-                Console.WriteLine($"  {i + 1}. {criteria[i].Name} (max {Fmt(criteria[i].MaxScore.Value)})");
+                Console.WriteLine($"  {i + 1}. {criteria[i].Name} (max {Fmt(criteria[i].MaxScore.Value)}, weight {Fmt(criteria[i].Weight.Value)})");
             var number = AskNumber("Criterion number: ", criteria.Count);
             return criteria[number - 1].Id;
         }
