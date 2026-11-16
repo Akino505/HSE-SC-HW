@@ -9,9 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Application\Services\" />
-    <Folder Include="Infrastructure\" />
-    <Folder Include="Presentation\" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="11.0.0" />
   </ItemGroup>
 
 </Project>
