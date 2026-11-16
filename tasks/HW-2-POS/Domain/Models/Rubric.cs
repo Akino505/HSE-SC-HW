@@ -12,7 +12,7 @@
             Add(criterion);
             return criterion;
         }
-        public Rubric Restore(IEnumerable<Criterion> criteria)
+        public static Rubric Restore(IEnumerable<Criterion> criteria)
         {
             var rubric = new Rubric();
             foreach (var criterion in criteria)
