@@ -1,5 +1,6 @@
 ﻿using HW_2_POS.Domain.Models;
 using HW_2_POS.Domain.Repositories;
+using HW_2_POS.Infrastructure.Mappers;
 using HW_2_POS.Infrastructure.Storage;
 
 namespace HW_2_POS.Infrastructure.Repositories
@@ -13,7 +14,7 @@ namespace HW_2_POS.Infrastructure.Repositories
         public void Save(Rubric rubric)
         {
             var database = storage.Load();
-            database.Criteria = rubric.ToDtos();
+            database.Criteria = rubric.ToDTOs();
             storage.Save(database);
         }
     }

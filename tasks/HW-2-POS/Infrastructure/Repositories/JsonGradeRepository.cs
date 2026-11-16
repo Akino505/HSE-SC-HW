@@ -1,5 +1,6 @@
 ﻿using HW_2_POS.Domain.Models;
 using HW_2_POS.Domain.Repositories;
+using HW_2_POS.Infrastructure.Mappers;
 using HW_2_POS.Infrastructure.Storage;
 
 namespace HW_2_POS.Infrastructure.Repositories
@@ -19,7 +20,7 @@ namespace HW_2_POS.Infrastructure.Repositories
         public void Save(StudentGrades grades)
         {
             var database = storage.Load();
-            database.Grades[grades.StudentId] = grades.ToDto();
+            database.Grades[grades.StudentId] = grades.ToDTO();
             storage.Save(database);
         }
     }

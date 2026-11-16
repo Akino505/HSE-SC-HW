@@ -11,7 +11,7 @@ namespace HW_2_POS.Infrastructure.Mappers
                 .Select(e => new Evaluation(e.CriterionId, new Score(e.Score), e.Date, e.Comment));
             return StudentGrades.Restore(dto.StudentId, evaluations);
         }
-        public static StudentGradesDTO ToDto(this StudentGrades grades)
+        public static StudentGradesDTO ToDTO(this StudentGrades grades)
         {
             var evaluations = grades.Evaluations
                 .Select(e => new EvaluationDTO(e.CriterionId, e.Score.Value, e.Date, e.Comment))

@@ -9,7 +9,7 @@ namespace HW_2_POS.Infrastructure.Mappers
         {
             return new Student(dto.Id, dto.FullName);
         }
-        public static StudentDTO ToDto(this Student student)
+        public static StudentDTO ToDTO(this Student student)
         {
             return new StudentDTO(student.Id, student.Name);
         }
