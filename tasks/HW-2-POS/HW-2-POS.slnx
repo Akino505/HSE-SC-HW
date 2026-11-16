@@ -1,6 +1,4 @@
 <Solution>
-  <Folder Name="/HW-2/">
-    <Project Path="../HW-2-POS.Tests/HW-2-POS.Tests.csproj" />
-    <Project Path="HW-2-POS.csproj" />
-  </Folder>
+  <Project Path="../HW-2-POS.Tests/HW-2-POS.Tests.csproj" />
+  <Project Path="HW-2-POS.csproj" />
 </Solution>
