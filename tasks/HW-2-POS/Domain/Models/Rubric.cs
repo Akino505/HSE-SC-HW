@@ -6,7 +6,7 @@
         public IReadOnlyList<Criterion> Criteria => _criteria;
         public decimal TotalWeight => _criteria.Sum(c => c.Weight.Value);
         public Criterion? GetCriterion(Guid id) => _criteria.FirstOrDefault(c => c.Id == id);
-        public Criterion AddCriterion(string name, decimal weight, decimal maxScore)
+        public Criterion AddCriterion(string name, decimal maxScore, decimal weight)
         {
             var criterion = new Criterion(Guid.NewGuid(), name, new MaxScore(maxScore), new Weight(weight));
             Add(criterion);
